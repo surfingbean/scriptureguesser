@@ -98,7 +98,8 @@ function showVerseOptions(book, chapter) {
   container.innerHTML = "<h3>Select Verse</h3>";
   bible[book][chapter].forEach((verseText, idx) => {
     const btn = document.createElement("button");
-    btn.innerText = (idx + 1) + ". " + verseText.substring(0, 30) + "...";
+    btn.innerText = (idx + 1);
+    // + ". " + verseText.substring(0, 30) + "..."
     btn.onclick = () => checkAnswer(book, chapter, idx + 1);
     container.appendChild(btn);
   });
